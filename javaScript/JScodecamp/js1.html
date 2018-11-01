@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World my name is Lemi.";
+    console.log("Helloooooooooooooooooo Worldddddddddddddddddddd!!!!!!!!!!!!!!!!!!!!!!!");
+}
+    
+ function myFunction2() {
+    document.getElementById("demo").innerHTML = "Good bye";
+    console.log("Good bye");
+}   
+function stringsWithVariable(){
+    var myName = "Lemi";
+    var myStr = "My name is " + myName + " and I am well";
+    console.log(myStr);
+}  
+
+var outer = "T-shirt";
+function myOutfit(){
+    var myOufit = " sweater";
+    
+    console.log("My favorit outfit is " + myOufit);
+
+}
+function testEqual(val){
+    var result ;
+    if (val == 12) {
+        result = "Equal";
+        
+    } else {
+        result = "not Equal";
+    }
+    console.log("from test equal" + result);
+    return result
+}
+function golfScore(par, strokes){
+    var score ;
+   
+    if (strokes == 1){
+            score = "Hole-in-one";
+    } else if (strokes <= par -2){
+            score = "Eagle";
+    } else if (strokes == par -1){
+            score = "Birdie";
+    } else if (strokes == par){
+            score = "Par";
+    } else if (strokes == par +1){
+        score = "Bogey";
+    } else if ( strokes == par +2){
+        score = "Double Bogey"
+    } else {
+        score = "Go Home!"
+    }
+    console.log("And the score is" ,score);
+    
+}
+function getDataFromScreen(){
+    var parxx = document.getElementById("golf_par").value;
+    var strokesxx = document.getElementById("golf_strokes").value;
+    console.log(parxx, strokesxx);
+    golfScore(parseInt(parxx), parseInt(strokesxx));
+}
+
+function switchOfStuff(val) {
+  var answer = "";
+  
+  switch(val){
+    case 'a': answer = 'apple'; 
+    break;
+    case 'b': answer = 'bird'; 
+    break;
+    case 'c': answer = 'cat'; 
+    break;
+    default: answer = 'stuff';
+  }
+}
+  
+  console.log(answer);  
+
+function trueOrFalse(wasThatTrue) {
+var result
+ if (wasThatTrue) 
+   {
+    result = ( "Yes, that was true");
+    }
+  result = ( "No, that was false");
+	console.log(result)
+	
+	
+function testStrict(val) {
+  if (val === 7) { 
+   console.log( "Equal");
+  }
+  console.log( "Not equal");
+
+
+	
+	
+ 
+	
+    
+
+</script>
+</head>
+
+<body>
+
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="myFunction2()">Good bye</button>
+<button type="button" onclick="stringsWithVariable()">Try it</button> 
+<button type="button" onclick="myOutfit()">outfit</button>
+<button type="button" onclick="testEqual(10)">testNotEqual</button>
+<button type="button" onclick="testEqual(12)">testEqual</button>
+<h1>golf score</h1> 
+    par: <input id="golf_par" type="text" name="fname"><br>
+  strokes: <input id="golf_strokes" type="text" name="lname"><br>
+
+<button type="button" onclick="getDataFromScreen()">Score</button>
+
+<button type="button" onclick="switchOfStuff(val)">switcht</button>
+<button type="button" onclick="trueOrFalse(wasThatTrue)">T/F</button>
+<button type="button" onclick="testStrict('7')">testStrict</button>
+<button type="button" onclick="stringsWithVariable()">Try it</button>
+
+</body>
+</html>
+
+
