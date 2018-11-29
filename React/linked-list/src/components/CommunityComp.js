@@ -6,7 +6,7 @@ class CommunityComp extends Component{
     render() {
         return (
             <div>
-                <h1>Dire Dawa</h1>
+                <h1>City</h1>
                 
             </div>
         );
