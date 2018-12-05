@@ -13,11 +13,11 @@ class City extends Object{
             this.lat.toString() + ' ' +
             this.long.toString() +  ' ' +
             this.pop.toString()
-    };       
-    
+    };
+
     movedIn(people){
       this.pop = this.pop + people;
-         
+
     };
 
     movedOut(people){
@@ -46,15 +46,108 @@ class City extends Object{
         }
     };
 
-
-
 };
-class Community extends City(){
+class Community extends Object {
+    constructor(){
+        super();
+        this.index = 0
+        this.myCities = [];
+    }
+    addCity(name, latitude, longitude, population){
 
-};
+        this.myCities.push(new City(name, latitude, longitude, population));
+    };
+
+    getPopulation(){
+        let total = 0;
+        for (let i in this.myCities){
+            total = total + this.myCities[i].pop ;
+        };
+        return total;
+    };
+
+     getMostNorthern(){
+        let max = this.myCities[0].lat;
+        for( let i in this.myCities){
+
+            if(this.myCities[i].lat > max){
+                max = this.myCities[i].show();
+            }
+        }
+        return max;
+    };
+
+    getMostSouthern(){
+        let min = this.myCities[0].lat;
+        for( let i in this.myCities){
+
+            if(this.myCities[i].lat < min){
+                min = this.myCities[i].show();
+            }
+        }
+        return min;
+    };
+
+    getCity() {
+        return this.myCities[this.index].name;
+    };
+
+    first(){
+        this.index = 0;
+    };
+    last(){
+        this.index = this.myCities.length -1;
+    };
+
+    next(){
+      if(this.inex == this.myCities.length - 1){
+        thid.index = 0
+      }else{
+        this.index = this.index + 1;
+      }
+
+    };
+
+    previous(){
+      if (this.index == this.myCities.length -1){
+        this.index = 0
+      }else{
+        this.index = this.index - 1;
+      }
+      
+    };
+
+    getIndex(){
+        return this.index;
+    };
+  };
 
 
 
-export default{City,Community};
+
+class Playseq extends Object{
+    constructor(){
+        super();
+        this.index = 0;
+        console.log('im in the contructor');
+    }
+    show(){
+        return this.index;
+    };
+
+    next(){
+       this.index= this.index + 1;
+    };
+
+    first(){
+        this.index = 1;
+    }
+    addquantity(){
+        this.quantity = this.quantity + 100;
+    };
+
+ };
 
 
+
+export default{City, Community,Playseq};

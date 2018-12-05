@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import LinkedListComp from './components/LinkListComp';
-import MathComp from './components/MathComp.js';
-import CommunityComp from './components/CommunityComp.js';
+import MathComp from './components/MathComp';
+import CommunityComp from './components/CommunityComp';
 class App extends Component {
   render() {
     return (

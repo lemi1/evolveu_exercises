@@ -50,7 +50,7 @@ class MathComp extends Component {
                 <button onClick={this.multiply}>multiply</button>
                 <button onClick={this.even_Odd}>Even or Odd</button>
                 <br />
-                <textarea id="answer" type='text'> </textarea>
+                <textarea id="answer" type='text'></textarea>
                 <br />
                 <button onClick={this.myMath2}>math2</button>
                 <input id="calc_string" type="text" ></input>
