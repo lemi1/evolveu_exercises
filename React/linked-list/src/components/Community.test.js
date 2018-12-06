@@ -79,7 +79,7 @@ test('testing getmostnorthern', () => {
     myCommunity.addCity('Edmonton', -34.6, 24.7, 10000);
     myCommunity.addCity('Vancouver', -74.6, 24.7, 10000);
 
-    expect(myCommunity.getMostNorthern()).toBe('Edmonton -34.6 24.7 10000');
+    expect(myCommunity.getMostNorthern().show()).toBe('Edmonton -34.6 24.7 10000');
 
 });
 
@@ -90,7 +90,7 @@ test('testing getmostnorthern', () => {
     myCommunity.addCity('Edmonton', -34.6, 24.7, 10000);
     myCommunity.addCity('Vancouver', -74.6, 24.7, 10000);
 
-    expect(myCommunity.getMostSouthern()).toBe('Vancouver -74.6 24.7 10000');
+    expect(myCommunity.getMostSouthern().show()).toBe('Vancouver -74.6 24.7 10000');
 
 });
 
@@ -101,13 +101,14 @@ test('testing getCity, getIndex, first, last, next, previous', () => {
     myCommunity.addCity('Edmonton', -34.6, 24.7, 10000);
     myCommunity.addCity('Vancouver', -74.6, 24.7, 10000);
     myCommunity.addCity('Addis Ababa',8.9,38.7,3383000);
-    expect(myCommunity.getCity()).toBe('Dire Dawa');
+    expect(myCommunity.getCity().name).toBe('Addis Ababa');
     myCommunity.first();
-    expect(myCommunity.getCity()).toBe('Dire Dawa');
+    expect(myCommunity.getCity().name).toBe('Dire Dawa');
     myCommunity.last();
-    expect(myCommunity.getCity()).toBe('Addis Ababa');
+    expect(myCommunity.getCity().name).toBe('Addis Ababa');
     myCommunity.next();
-    expect(myCommunity.getIndex()).toBe(0);
+    expect(myCommunity.getCity().name).toBe('Vancouver');
+    myCommunity.previous();
 
 
 });
