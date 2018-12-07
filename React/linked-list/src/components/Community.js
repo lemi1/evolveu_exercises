@@ -50,7 +50,8 @@ class City extends Object{
 class Community extends Object {
     constructor(){
         super();
-        this.index = -1
+      this.index = -1
+        //this.index= 0;
         this.myCities = [];
     }
     addCity(name, latitude, longitude, population){
@@ -66,20 +67,31 @@ class Community extends Object {
               var i;
               for(i=length-1;i>this.index+1;i--){
                 this.myCities[i] = this.myCities[i - 1]
+                // move or copy [i -1] to [i]postion then
+                //decrease the value of i by 1
               }
               this.myCities[this.index + 1] = tmpCity;
+              //the length of the array
             }else{
               this.myCities.push(tmpCity)
             }
             this.index++;
+            // this.length++;
     };
 
     getPopulation(){
-        let total = 0;
-        for (let i in this.myCities){
-            total = total + this.myCities[i].pop ;
-        };
-        return total;
+      let total = 0;
+      var i;
+      for(i=0; i< this.myCities.length;i++){
+        total = total + this.myCities[i].pop;
+      }
+
+      return total;
+        // let total = 0;
+        // for (let i in this.myCities){
+        //     total = total + this.myCities[i].pop ;
+        // };
+        // return total;
     };
 
      getMostNorthern(){
@@ -126,7 +138,7 @@ class Community extends Object {
     };
 
     next(){
-      if(this.inex == this.myCities.length - 1){
+      if(this.index == this.myCities.length - 1){
         this.index = 0
       }else{
         this.index = this.index + 1;
@@ -135,8 +147,8 @@ class Community extends Object {
     };
 
     previous(){
-      if (this.index == this.myCities.length -1){
-        this.index = 0
+      if (this.index == 0){
+        this.index = this.myCities.length -1
       }else{
         this.index = this.index - 1;
       }
@@ -144,11 +156,10 @@ class Community extends Object {
     };
 
     getIndex(){
-        let length = this.listOfCities.length;
+        let length = this.myCities.length;
         if(length > 0){
             return this.index;
-        }
-        else{
+        }else{
             return null
         }
     };
@@ -157,7 +168,10 @@ class Community extends Object {
         this.myCities = [];
         this.index = -1;
     }
-
+ //    show(index){
+ //   // console.log(index+1, this.myCities[index]);
+ //      return this.myCities[index].show();
+ // }
 };
 
 
@@ -188,4 +202,4 @@ class Playseq extends Object{
 
 
 
-export default{City, Community,Playseq};
+export default{City,Community,Playseq};

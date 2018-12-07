@@ -563,106 +563,106 @@ console.log(restaurant.checkAvailbilty(4));
 
 // ////////////////// string-methods/////////////////////////////////
 
-let name = ' Lemi Mohamed ';
+// let name = ' Lemi Mohamed ';
 
-// length property
-console.log(name.length);
+// // length property
+// console.log(name.length);
 
-// convert uppercase
-console.log(name.toUpperCase());
+// // convert uppercase
+// console.log(name.toUpperCase());
 
-// covert lowercase
-console.log(name.toLowerCase());
+// // covert lowercase
+// console.log(name.toLowerCase());
 
-// Includes method
-let password = 'abc123098';
-console.log(password.includes('password'));
+// // Includes method
+// let password = 'abc123098';
+// console.log(password.includes('password'));
 
-// Trim method to get of extra space
-console.log(name.trim());
+// // Trim method to get of extra space
+// console.log(name.trim());
 
-// challange//
+// // challange//
 
-// isValidPasword
-// length is more than 8 and does not contain the word password
+// // isValidPasword
+// // length is more than 8 and does not contain the word password
 
-let isValidPasword = function(password){
+// let isValidPasword = function(password){
 	
-	return password.length > 8 && !password.includes('password') ;
+// 	return password.length > 8 && !password.includes('password') ;
 	
-}
+// }
 
-console.log(isValidPasword('asdfp'));
-console.log(isValidPasword('aabs123!@#$%^&*'));
-console.log(isValidPasword('asdfghjklpassword'));
-
-
-/////// number methods //////////////////////////////////
-
-let num = 103.941;
-// toFixed method  round your number to decimal YOU WANT
-console.log(num.toFixed(1));
-
-// Math method
-console.log(Math.round(num));
-
-console.log(Math.round(num));
-console.log(Math.floor(num));// round down
-console.log(Math.ceil(num));// round up
-
-let min = 10;
-let max = 20;
-let randomNUm = Math.floor(Math.random() * (max - min + 1)) + min;
- //10 -20
-console.log(randomNUm);
+// console.log(isValidPasword('asdfp'));
+// console.log(isValidPasword('aabs123!@#$%^&*'));
+// console.log(isValidPasword('asdfghjklpassword'));
 
 
-// challenge///////////
-// 1 - 5 true if correct - false is not correct
-let makeGuess = function(num){
-	let minNum = 1;
-	let maxNum = 5;
-	let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
-	return num === randomNum
-};
+// /////// number methods //////////////////////////////////
 
-console.log(makeGuess(2));
+// let num = 103.941;
+// // toFixed method  round your number to decimal YOU WANT
+// console.log(num.toFixed(1));
 
-// const cannot be reassinged
-const isRaining = true;
-//isRaining = false;
-console.log(isRaining);
+// // Math method
+// console.log(Math.round(num));
 
-const person = {
-	age:27
-}
-person.age = 28 // valid just changing one of the object's properties
-//person = {} invalid trying to reassign person object
-console.log(person)
+// console.log(Math.round(num));
+// console.log(Math.floor(num));// round down
+// console.log(Math.ceil(num));// round up
 
-//// var variable /////////////////////////////////////////////////
+// let min = 10;
+// let max = 20;
+// let randomNUm = Math.floor(Math.random() * (max - min + 1)) + min;
+//  //10 -20
+// console.log(randomNUm);
 
-// let and const you cant re-define an varibale or you will get an error, 
-//but with var you can reassign a variable and not get an error
-// var is function scope
-// let and const are block scope
-let boy = 'bilal';
-boy = 'josh';
 
-let boy = 'ben'
-console.log(boy);
+// // challenge///////////
+// // 1 - 5 true if correct - false is not correct
+// let makeGuess = function(num){
+// 	let minNum = 1;
+// 	let maxNum = 5;
+// 	let randomNum = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+// 	return num === randomNum
+// };
 
-var boy = 'bilal';
-boy = 'josh';
+// console.log(makeGuess(2));
 
-var boy = 'ben'
-console.log(boy);
+// // const cannot be reassinged
+// const isRaining = true;
+// //isRaining = false;
+// console.log(isRaining);
 
-if(10 === 10){
-	let boy = 'ben'
-}
+// const person = {
+// 	age:27
+// }
+// person.age = 28 // valid just changing one of the object's properties
+// //person = {} invalid trying to reassign person object
+// console.log(person)
 
-console.log(boy)
+// //// var variable /////////////////////////////////////////////////
+
+// // let and const you cant re-define an varibale or you will get an error, 
+// //but with var you can reassign a variable and not get an error
+// // var is function scope
+// // let and const are block scope
+// // let boy = 'bilal';
+// // boy = 'josh';
+
+// // let boy = 'ben'
+// // console.log(boy);
+
+// // var boy = 'bilal';
+// // boy = 'josh';
+
+// var boy = 'ben'
+// console.log(boy);
+
+// if(10 === 10){
+// 	let boy = 'ben'
+// }
+
+// console.log(boy)
 
 
 
