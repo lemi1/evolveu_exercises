@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import lm from './Community';
-let myHood = new lm.Community();
-class CommunityComp extends Component{
-
-    addCity = () => {
+// let myHood = new lm.Community();
+class CommunityComp extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      myHood: new lm.Community(),
+      a : 'ghjk;h',
+      b : 'hiiiiii'
+    };
+  };
+  addCity = () => {
       // let myHood = new lm.Community();
       let name = document.getElementById("name").value;
       let lat = document.getElementById("lat").value;
       let long = document.getElementById("long").value;
       let pop = document.getElementById("pop").value;
       let display = document.getElementById("display");
-      display.value = myHood.addCity(name, parseFloat(lat),parseFloat(long),parseInt(pop));
-      // document.getElementById("display").value=myHood.addCity();
+      this.state.myHood.addCity(name,lat,long,pop);
+      display.value = this.state.myHood.getCity().show();
+      console.log('heyyyyyyyyy',lm);
+      // document.getElementById("display").value=lm.addCity();
     };
 
 

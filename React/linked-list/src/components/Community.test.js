@@ -53,14 +53,14 @@ test('testing whichSphere', () => {
 });
 
 test('testing addCity', () => {
-    let Mycity = new lm.Community();
+    let myCity = new lm.Community();
 
-    Mycity.addCity('Edmonton', -34.6, 24.7, 3456);
-    Mycity.addCity('Calgary', -56.9, 78.9, 123456);
-    Mycity.addCity('Moscow', 50.9, 38.7, 23408);
-    expect(Mycity.myCities[0].show()).toBe('Edmonton -34.6 24.7 3456');
-    expect(Mycity.myCities[1].show()).toBe('Calgary -56.9 78.9 123456');
-    expect(Mycity.myCities[2].show()).toBe('Moscow 50.9 38.7 23408')
+    myCity.addCity('Edmonton', -34.6, 24.7, 3456);
+    myCity.addCity('Calgary', -56.9, 78.9, 123456);
+    myCity.addCity('Moscow', 50.9, 38.7, 23408);
+    expect(myCity.myCities[0].show()).toBe('Edmonton -34.6 24.7 3456');
+    expect(myCity.myCities[1].show()).toBe('Calgary -56.9 78.9 123456');
+    expect(myCity.myCities[2].show()).toBe('Moscow 50.9 38.7 23408')
 });
 
 test('testing getpopulation', () => {

@@ -50,7 +50,7 @@ class City extends Object{
 class Community extends Object {
     constructor(){
         super();
-      this.index = -1
+        this.index = -1
         //this.index= 0;
         this.myCities = [];
     }
