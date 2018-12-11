@@ -84,7 +84,16 @@ test('testing getmostNorthern', () => {
 
 
 });
+test('testing getmostNorthern', () => {
+    let myCommunity = new lm.Community();
 
+    myCommunity.addCity('Calgary', 56.9, 78.9, 123456);
+    myCommunity.addCity('Edmonton', 34.6, 24.7, 10000);
+    myCommunity.addCity('Vancouver', 74.6, 24.7, 10000);
+    myCommunity.addCity('dd', 14.6, 24.7, 10000);
+
+    expect(myCommunity.getMostNorthern().show()).toBe('Edmonton -34.6 24.7 10000');
+});
 test('testing getmostSorthern', () => {
     let myCommunity = new lm.Community();
 
@@ -105,14 +114,15 @@ test('testing getCity, getIndex, first, last, next, previous', () => {
     myCommunity.addCity('Addis Ababa',8.9,38.7,3383000);
     expect(myCommunity.getCity().name).toBe('Addis Ababa');
     myCommunity.first();
+    expect(myCommunity.getCity().name).toBe('Dire Dawa');
     myCommunity.addCity('Jijga', -34.6, 24.7, 10000);
     expect(myCommunity.getCity().name).toBe('Jijga');
-    myCommunity.next();
-    expect(myCommunity.getCity().name).toBe('Calgary');
-    myCommunity.next();
-    expect(myCommunity.getCity().name).toBe('Edmonton');
+    myCommunity.last();
+    expect(myCommunity.getCity().name).toBe('Addis Ababa');
     myCommunity.previous();
-    expect(myCommunity.getCity().name).toBe('Calgary');
+    expect(myCommunity.getCity().name).toBe('Vancouver');
+    myCommunity.previous();
+    expect(myCommunity.getCity().name).toBe('Edmonton');
     myCommunity.first();
     expect(myCommunity.getCity().name).toBe('Dire Dawa');
     myCommunity.previous();

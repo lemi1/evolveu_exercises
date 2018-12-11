@@ -1,7 +1,7 @@
-import React, {component} from 'react';
+import React from 'react';
 
 
-  
+
   class LinkedListComp extends React.Component {
     render() {
       return (
@@ -13,7 +13,7 @@ import React, {component} from 'react';
         <input type='text'></input><br></br>
         <button>
           add
-        </button> 
+        </button>
         <input type='text'></input>
         <br></br>
         </div>

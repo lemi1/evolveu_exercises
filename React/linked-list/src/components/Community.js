@@ -100,7 +100,6 @@ class Community extends Object {
         var i;
     for(i=1;i<this.myCities.length;i++){
       if(this.myCities[i].lat > max){
-        max = this.myCities[i].lat;
         cityIdx = i;
       }
     }
@@ -138,7 +137,7 @@ class Community extends Object {
     };
 
     next(){
-      if(this.index == this.myCities.length - 1){
+      if(this.index === this.myCities.length - 1){
         this.index = 0
       }else{
         this.index = this.index + 1;
@@ -147,7 +146,7 @@ class Community extends Object {
     };
 
     previous(){
-      if (this.index == 0){
+      if (this.index === 0){
         this.index = this.myCities.length -1
       }else{
         this.index = this.index - 1;
@@ -168,16 +167,24 @@ class Community extends Object {
         this.myCities = [];
         this.index = -1;
     }
- //    show(index){
- //   // console.log(index+1, this.myCities[index]);
- //      return this.myCities[index].show();
- // }
+
+    showAll(){
+      let x;
+      let showall="";
+
+      for (x=0; x < this.myCities.length; x++){
+        showall += `name:${this.myCities[x].name} lat:${this.myCities[x].lat} long:${this.myCities[x].long} pop:${this.myCities[x].pop}
+        \n`;
+      }
+      return showall;
+
+    }
+
 };
 
 
 
-
-class Playseq extends Object{
+class Playseq extends Object {
     constructor(){
         super();
         this.index = 0;
