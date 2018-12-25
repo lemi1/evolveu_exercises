@@ -1,55 +1,55 @@
 import lm from './Community';
 test('testing show', () => {
-    let Mycity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
-    expect(Mycity.show()).toBe('Dire Dawa 9.6 41.8 440000');
+    let myCity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
+    expect(myCity.show()).toBe('Dire Dawa 9.6 41.8 440000');
 
-    Mycity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
-    expect(Mycity.show()).toBe('Addis Ababa 8.9 38.7 3383000');
+    myCity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
+    expect(myCity.show()).toBe('Addis Ababa 8.9 38.7 3383000');
 });
 
 test('testing movedIn', () => {
-    let Mycity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
-    Mycity.movedIn(1000);
-    expect(Mycity.show()).toBe('Dire Dawa 9.6 41.8 441000');
+    let myCity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
+    myCity.movedIn(1000);
+    expect(myCity.show()).toBe('Dire Dawa 9.6 41.8 441000');
 
-    Mycity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
-    Mycity.movedIn(2000);
-    expect(Mycity.show()).toBe('Addis Ababa 8.9 38.7 3385000');
+    myCity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
+    myCity.movedIn(2000);
+    expect(myCity.show()).toBe('Addis Ababa 8.9 38.7 3385000');
 });
 
 test('testing mouvedOut', () => {
-    let Mycity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
-    Mycity.movedOut(1100);
-    expect(Mycity.show()).toBe('Dire Dawa 9.6 41.8 438900');
+    let myCity = new lm.City('Dire Dawa', 9.6, 41.8, 440000);
+    myCity.movedOut(1100);
+    expect(myCity.show()).toBe('Dire Dawa 9.6 41.8 438900');
 
-    Mycity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
-    Mycity.movedOut(2200);
-    expect(Mycity.show()).toBe('Addis Ababa 8.9 38.7 3380800');
+    myCity = new lm.City('Addis Ababa', 8.9, 38.7, 3383000);
+    myCity.movedOut(2200);
+    expect(myCity.show()).toBe('Addis Ababa 8.9 38.7 3380800');
 });
 
 test('testing howBig', () => {
-    let Mycity = new lm.City('Riyadh', 9.6, 41.8, 540000);
-    expect(Mycity.howBig()).toBe('City');
+    let myCity = new lm.City('Riyadh', 9.6, 41.8, 540000);
+    expect(myCity.howBig()).toBe('City');
 
-    Mycity = new lm.City('Jijiga', 8.9, 38.7, 23408);
-    expect(Mycity.howBig()).toBe('Large Town');
+    myCity = new lm.City('Jijiga', 8.9, 38.7, 23408);
+    expect(myCity.howBig()).toBe('Large Town');
 
-    Mycity = new lm.City('Asmara', 8.9, 38.7, 567);
-    expect(Mycity.howBig()).toBe('Village');
+    myCity = new lm.City('Asmara', 8.9, 38.7, 567);
+    expect(myCity.howBig()).toBe('Village');
 
-    Mycity = new lm.City('Jeddah', 8.9, 38.7, 55);
-    expect(Mycity.howBig()).toBe('Hamlet');
+    myCity = new lm.City('Jeddah', 8.9, 38.7, 55);
+    expect(myCity.howBig()).toBe('Hamlet');
 
-    Mycity = new lm.City('Jimma', 8.9, 38.7, 14408);
-    expect(Mycity.howBig()).toBe('Town');
+    myCity = new lm.City('Jimma', 8.9, 38.7, 14408);
+    expect(myCity.howBig()).toBe('Town');
 });
 
 test('testing whichSphere', () => {
-    let Mycity = new lm.City('Mumbai', -9.6, 41.8, 540000);
-    expect(Mycity.whichSphere()).toBe('Southern Hemisphere');
+    let myCity = new lm.City('Mumbai', -9.6, 41.8, 540000);
+    expect(myCity.whichSphere()).toBe('Southern Hemisphere');
 
-    Mycity = new lm.City('Moscow', 50.9, 38.7, 23408);
-    expect(Mycity.whichSphere()).toBe('Northern Hemisphere');
+    myCity = new lm.City('Moscow', 50.9, 38.7, 23408);
+    expect(myCity.whichSphere()).toBe('Northern Hemisphere');
 });
 
 test('testing addCity', () => {
@@ -92,7 +92,7 @@ test('testing getmostNorthern', () => {
     myCommunity.addCity('Vancouver', 74.6, 24.7, 10000);
     myCommunity.addCity('dd', 14.6, 24.7, 10000);
 
-    expect(myCommunity.getMostNorthern().show()).toBe('Edmonton -34.6 24.7 10000');
+    expect(myCommunity.getMostNorthern().show()).toBe('Vancouver 74.6 24.7 10000');
 });
 test('testing getmostSorthern', () => {
     let myCommunity = new lm.Community();
@@ -174,18 +174,18 @@ test('testing Playseq', () => {
 let arr = ['a','b','c'];
 let x = arr[0];
 arr[0]=arr[2];
-console.log(arr);
+//console.log(arr);
 arr[2]= x;
-console.log(arr);
+//console.log(arr);
 
 let myFav = new lm.City('Toronto', 46.6, -79.3, 2732000);
-console.log(myFav);
+//console.log(myFav);
 
 let c = myFav;
-console.log(c);
+//console.log(c);
 
 myFav.movedIn(10000);
-console.log(myFav);
+//console.log(myFav);
 
 let myCities = [
     new lm.City('Calgary', -56.9, 78.9, 123456),
@@ -194,7 +194,7 @@ let myCities = [
     new lm.City('Ottawa', -12.9, 44.4, 13789),
     new lm.City('Montreal', -65.9, 34.9, 234567)
 ];
-console.log(myCities);
+//console.log(myCities);
 
 var i;
 // let total = 0
@@ -212,4 +212,4 @@ for (i = 0; i < myCities.length; i++) {
     // console.log(total);
 };
 
-console.log(total);
+//console.log(total);

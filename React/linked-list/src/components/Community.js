@@ -188,7 +188,7 @@ class Playseq extends Object {
     constructor(){
         super();
         this.index = 0;
-        console.log('im in the contructor');
+        //console.log('im in the contructor');
     }
     show(){
         return this.index;

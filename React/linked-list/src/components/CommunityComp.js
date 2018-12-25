@@ -96,7 +96,7 @@ class CommunityComp extends React.Component{
                 <br/>
                 <br/>
                 <button onClick={this.addCity}>add a City</button>
-                // <button onClick={this.showCity}>display</button>
+              
                 <button onClick={this.displayList}>city list</button>
                 <button onClick={this.getNorth}>Most Northern City</button>
                 <button onClick={this.getSouth}>Most Southern City</button>
