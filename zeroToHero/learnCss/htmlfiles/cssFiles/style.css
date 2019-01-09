@@ -1,0 +1,17 @@
+
+body {
+  background-image:url("world2.jpg");
+}
+h2 {
+   color: red;
+   text-align: center;
+   border:5px solid purple;
+ }
+
+ p {
+   color: green;
+ }
+
+ p {
+   color: blue;
+ }

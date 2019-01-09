@@ -26,34 +26,34 @@ class MathComp extends Component {
         let answer = document.getElementById("answer");
         answer.value = lm.even_Odd(v1);
     };
-    myMath2 = () => {
-        let v1 = document.getElementById("v1").value;
-        let v2 = document.getElementById("v2").value;
-        let a = document.getElementById("calc_string").value;
-        let answer = document.getElementById("answer");
-        answer.value = lm.math2(a,parseInt(v1), parseInt(v2));
-
-    };
+    // myMath2 = () => {
+    //     let v1 = document.getElementById("v1").value;
+    //     let v2 = document.getElementById("v2").value;
+    //     let a = document.getElementById("calc_string").value;
+    //     let answer = document.getElementById("answer");
+    //     answer.value = lm.math2(a,parseInt(v1), parseInt(v2));
+    //
+    // };
 
 
     render() {
         return (
-            <div>
+            <div className="math">
                 <h1>Mathematics</h1>
                 value1: <input id="v1" type="text"></input>
-                <br />
+                <br/>
                 value2: <input id="v2" type="text"></input>
-                <br />
-                <button onClick={this.sum}>sum</button>
+                <br/>
+                {/* <button onClick={this.sum}>sum</button> */}
                 <button onClick={this.add}>add</button>
                 <button onClick={this.subtract}>subtract</button>
                 <button onClick={this.multiply}>multiply</button>
                 <button onClick={this.even_Odd}>Even or Odd</button>
-                <br />
+                <br/>
                 <textarea id="answer" type='text'></textarea>
-                <br />
-                <button onClick={this.myMath2}>math2</button>
-                <input id="calc_string" type="text" ></input>
+                <br/>
+                {/* <button onClick={this.myMath2}>math2</button>
+                <input id="calc_string" type="text" ></input> */}
             </div>
         );
     }

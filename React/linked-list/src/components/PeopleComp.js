@@ -45,7 +45,7 @@ class PeopleComp extends React.Component {
 
   render = () => {
       return (
-          <div>
+          <div className="people">
           <h1>People</h1>
           Name:<textarea id="name" rows= "1" cols="10"></textarea>
           Age:<textarea id="age"  rows= "1" cols="10"></textarea>
@@ -58,7 +58,7 @@ class PeopleComp extends React.Component {
           <button onClick={this.showAll}>show all</button>
           <br/>
           <br/>
-          <textarea id="display" rows="20" cols="50"></textarea>
+          <div id="display"></div>
 
 
           </div>

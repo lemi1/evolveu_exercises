@@ -86,7 +86,7 @@ class CommunityComp extends React.Component{
 
     render = () => {
         return (
-            <div>
+            <div className="community">
                 <h1>City</h1>
                 City Name:<textarea id="name" rows= "1" cols="10"></textarea>
                 Latitude:<textarea id="lat"  rows= "1" cols="10"></textarea>
@@ -96,7 +96,7 @@ class CommunityComp extends React.Component{
                 <br/>
                 <br/>
                 <button onClick={this.addCity}>add a City</button>
-              
+
                 <button onClick={this.displayList}>city list</button>
                 <button onClick={this.getNorth}>Most Northern City</button>
                 <button onClick={this.getSouth}>Most Southern City</button>
@@ -109,7 +109,7 @@ class CommunityComp extends React.Component{
                 <button onClick={this.getPrevious}>Previous</button>
                 <br/>
                 <br/>
-                <textarea id="display" rows="20" cols="50"></textarea>
+                <div id="display"></div>
                 <br/>
             </div>
         );

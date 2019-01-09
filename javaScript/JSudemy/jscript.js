@@ -62,7 +62,7 @@ console.log(now + 2);
 console.log(now * 2);
 console.log(now / 2);
 
-// logiacl operators 
+// logiacl operators
 /*
 var johnOlder = ageJohn < ageMark;
 console.log(johnOlder);
@@ -144,7 +144,7 @@ let age = 8
 if(age <= 7){
 	console.log('child discount');
 }
-	
+
 if(age >= 65){
 	console.log('senoir dsicount')
 }
@@ -174,7 +174,7 @@ if(isAccountLocked){
 }
 
 
-// challenge 
+// challenge
 
 let degree = 130
 
@@ -231,7 +231,7 @@ if(true){
 	console.log(varOne)
 	let varTwo = 'varTwo';
 	console.log(varTwo);
-	
+
 	if(true){
 	   let varFour = 'varFour'
 	   }
@@ -302,7 +302,7 @@ console.log(tempTwo)
 
 // undefined a varibale not assigned
 
-let x 
+let x
 if (x === undefined){
 	console.log('please provide a name')
 }else{
@@ -341,13 +341,13 @@ console.log(result)
 let getScoreText = function (name = 'anonymous', score = 0){
 	return `name: ${name} - score: ${score}`
 	//return "name: " + name + " score " + score
-	
+
 }
 
 let scoreText = getScoreText(undefined, 99)
 console.log(scoreText)
 
-// challenge 
+// challenge
 
 let tipPercent = function (total, tip = 0.2){
 	return total * tip
@@ -399,10 +399,10 @@ console.log(theTipis)
 let getGrades = function(studentMarks, totalMarks ){
 	let mark = (studentMarks / totalMarks) * 100
 	let lettergrade = ''
-	
+
 	if (mark >=90 ){
 		lettergrade = 'A'
-	
+
 	} else if(mark >= 80){
 		 lettergrade = 'B'
 	} else if(mark >= 70 ){
@@ -423,7 +423,7 @@ console.log(thegrades)
 // Objects/////////////////////////////////////////////////////////////////
 /*
 let myBook = {
-	title: '1984', 
+	title: '1984',
 	author: 'George Orwell',
 	pageCount: 326
 }
@@ -448,14 +448,14 @@ console.log(`${myBrother.name} is ${myBrother.age} and lives in ${myBrother.loca
 */
 /*
 let myBook = {
-	title: '1984', 
+	title: '1984',
 	author: 'George Orwell',
 	pageCount: 326
 }
 
 
 let otherBook = {
-	title: 'Harry Potter', 
+	title: 'Harry Potter',
 	author: 'JK Rowling',
 	pageCount: 550
 }
@@ -464,7 +464,7 @@ let getSummary = function(book){
 		summary:`${book.title} by ${book.author}`,
 		pageCountSummary:`${book.title} is ${book.pageCount} pages long`
 	}
-	
+
 }
 
 let bookSummary = getSummary(myBook);
@@ -500,7 +500,7 @@ let myAccount = {
 
 let addIncome = function (account, income){
 	account.income = account.income + income
-	
+
 }
 
 
@@ -508,21 +508,21 @@ let addIncome = function (account, income){
 let resetAccount = function (account){
 	account.expenses =  0
 	account.income = 0
-	
+
 }
 
 
 let addExpense = function (account, expense){
 	account.expenses = account.expenses + expense
-	
+
 }
 
 
 let getAcountSummary = function (account) {
 	let balance = account.income - account.expenses
-	return `Account for ${account.name} has a of ${balance} and an income of 
+	return `Account for ${account.name} has a of ${balance} and an income of
 	${account.income} and ${account.expenses} in expenses `
-	
+
 }
 
 addIncome(myAccount, 4000)
@@ -554,7 +554,7 @@ let restaurant = {
 	}
 
 }
- 
+
 restaurant.seatParty(72);
 console.log(restaurant.checkAvailbilty(4));
 restaurant.removeParty(5);
@@ -587,9 +587,9 @@ console.log(restaurant.checkAvailbilty(4));
 // // length is more than 8 and does not contain the word password
 
 // let isValidPasword = function(password){
-	
+
 // 	return password.length > 8 && !password.includes('password') ;
-	
+
 // }
 
 // console.log(isValidPasword('asdfp'));
@@ -642,7 +642,7 @@ console.log(restaurant.checkAvailbilty(4));
 
 // //// var variable /////////////////////////////////////////////////
 
-// // let and const you cant re-define an varibale or you will get an error, 
+// // let and const you cant re-define an varibale or you will get an error,
 // //but with var you can reassign a variable and not get an error
 // // var is function scope
 // // let and const are block scope
@@ -663,6 +663,3 @@ console.log(restaurant.checkAvailbilty(4));
 // }
 
 // console.log(boy)
-
-
-
