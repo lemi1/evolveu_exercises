@@ -1,6 +1,9 @@
 .map{
-  width: 50%;
-  height:50%;
+  width: 55%;
+  height:10%;
+  position: absolute;
+  left: 300px;
+  
 }
 .bg {
   height: 80vh;

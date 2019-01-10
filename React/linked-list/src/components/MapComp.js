@@ -48,7 +48,7 @@ class MapComp extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '50vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: /* YOUR KEY HERE */'' }}
           center={{lat: this.props.lat, lng: this.props.lng}}
@@ -57,7 +57,7 @@ class MapComp extends Component {
           <AnyReactComponent
             lat={this.props.lat}
             lng={this.props.lng}
-            text={'lemi0000'}
+            text={'0'}
           />
         </GoogleMapReact>
       </div>
