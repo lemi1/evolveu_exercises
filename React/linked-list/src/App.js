@@ -8,6 +8,7 @@ import PeopleComp from './components/PeopleComp';
 import thumbs from './calc.svg';
 import thumbs1 from './people.svg';
 import thumbs2 from './globe.svg';
+
 class App extends Component {
   constructor() {
     super();
@@ -24,18 +25,18 @@ class App extends Component {
   render() {
     let toShow;
     if (this.state.compToShow === 'math') {
-      toShow = 
-        <div> 
+      toShow =
+        <div>
           <MathComp name="math"/>
         </div>
       } else if(this.state.compToShow === "people") {
-          toShow = 
-            <div> 
+          toShow =
+            <div>
               <PeopleComp name="people"/>
             </div>
         }else if(this.state.compToShow === "city") {
-          toShow = 
-            <div> 
+          toShow =
+            <div>
               <CommunityComp name='city'/>
             </div>
         };
@@ -45,21 +46,14 @@ class App extends Component {
         <img src={thumbs1} className="logos" name="people" onClick={this.onIcon} alt="people" />
         <img src={thumbs2} className="logos" name="city" onClick={this.onIcon} alt="globe" />
         <div> {toShow} </div>
-        
-        
+
+
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
         </header>
       </div>
     );

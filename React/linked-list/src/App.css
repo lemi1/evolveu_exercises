@@ -1,18 +1,32 @@
-
-.community{
-  color: white;
-  background: url("world3.jpg");
+.map{
+  width: 50%;
+  height:50%;
 }
-.math{
-  color: white;
-  background: url("math.jpg");
-
-}
-.people{
+.bg {
+  height: 80vh;
+  background:url("community.jpg");
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center;
   color: black;
-  background:url("community.jpg")
-
 }
+.bg1 {
+  height: 80vh;
+  background:url("world3.jpg");
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: black;
+}
+.bg2 {
+  height: 80vh;
+  background:url("math.jpg");
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: black;
+}
+
 
 
 
@@ -28,7 +42,7 @@
 
 
 .App-header {
-  
+
   min-height: 0vh;
   display: flex;
   flex-direction: column;
@@ -36,6 +50,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {

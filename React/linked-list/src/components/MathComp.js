@@ -38,6 +38,7 @@ class MathComp extends Component {
 
     render() {
         return (
+          <div className="bg2">
             <div className="math">
                 <h1>Mathematics</h1>
                 value1: <input id="v1" type="text"></input>
@@ -55,6 +56,7 @@ class MathComp extends Component {
                 {/* <button onClick={this.myMath2}>math2</button>
                 <input id="calc_string" type="text" ></input> */}
             </div>
+          </div>
         );
     }
 }

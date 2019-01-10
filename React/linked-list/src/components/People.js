@@ -8,6 +8,7 @@ class People extends Object {
 
   birthday() {
     this.age = this.age + 1;
+    
   };
 
   show() {

@@ -11,28 +11,28 @@ class PeopleComp extends React.Component {
     let dollars = parseFloat(document.getElementById("dollars").value);
     //let display = document.getElementById("display");
     this.state.myTribe.addPeople(name,age,dollars);
-    //console.log(this.state.myTribe);
-  //  console.log(this.state.myTribe.getPeople());
+    //console.log(this.state.myTribe.show());
+    // console.log(this.state.myTribe.getPeople());
     //display.value = this.state.myTribe.show();
-    document.getElementById("display").value = this.state.myTribe.show();
+    document.getElementById("display").innerHTML = `${this.state.myTribe.showAll()}`;
 
   };
 
   sumPeople = () => {
 
-    document.getElementById('display').value
+    document.getElementById('display').innerHTML
      =
     this.state.myTribe.sumPeople();
   };
 
   callBirthday = () => {
-    document.getElementById('display').value
+    document.getElementById('display').innerHTML
     =
     this.state.myTribe.callBirthday();
   };
 
   showAll = () => {
-    document.getElementById('display').value
+    document.getElementById('display').innerHTML
     =
     this.state.myTribe.showAll();
 
@@ -45,11 +45,12 @@ class PeopleComp extends React.Component {
 
   render = () => {
       return (
+          <div className="bg">
           <div className="people">
           <h1>People</h1>
           Name:<textarea id="name" rows= "1" cols="10"></textarea>
           Age:<textarea id="age"  rows= "1" cols="10"></textarea>
-          Dollars:<textarea id="dollars" rows= "1" cols="10"></textarea>
+
           <br/>
           <br/>
           <button onClick={this.addPeople}>add to the list</button>
@@ -61,6 +62,7 @@ class PeopleComp extends React.Component {
           <div id="display"></div>
 
 
+          </div>
           </div>
       );
   };

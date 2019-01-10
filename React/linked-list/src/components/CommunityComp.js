@@ -1,10 +1,17 @@
 import React from 'react';
 import lm from './Community';
+import MapComp from  './MapComp'
 // let myHood = new lm.Community();
 class CommunityComp extends React.Component{
   constructor(){
     super();
-    this.state = {myHood: new lm.Community()};
+    this.state = {
+      myHood: new lm.Community(),
+      lat:50,
+      lng:50
+    };
+
+
   };
   addCity = () => {
       // let myHood = new lm.Community();
@@ -14,7 +21,7 @@ class CommunityComp extends React.Component{
       let pop = parseFloat(document.getElementById("pop").value);
       let display = document.getElementById("display");
       this.state.myHood.addCity(name,lat,long,pop);
-      //console.log(this.state.myHood);
+      console.log(this.state.myHood);
       display.value = this.state.myHood.getCity().show();
 
       // document.getElementById("display").value=lm.addCity();
@@ -75,7 +82,15 @@ class CommunityComp extends React.Component{
     reset = () => {
       this.state.myHood.reset();
       document.getElementById("display").value = "";
-    };
+      };
+
+      map = () => {
+        let city = this.state.myHood.getCity();
+        this.setState({lat:city.lat, lng:city.long})
+        console.log(this.state.myHood.myCities[0].lat);
+        console.log(this.state.lat);
+        console.log(this.state.myHood);
+      }
 
 
 
@@ -86,6 +101,7 @@ class CommunityComp extends React.Component{
 
     render = () => {
         return (
+          <div className="bg1">
             <div className="community">
                 <h1>City</h1>
                 City Name:<textarea id="name" rows= "1" cols="10"></textarea>
@@ -107,11 +123,17 @@ class CommunityComp extends React.Component{
                 <button onClick={this.getLast}>Last</button>
                 <button onClick={this.getNext}>Next</button>
                 <button onClick={this.getPrevious}>Previous</button>
+                <button onClick={this.map}>map</button>
                 <br/>
                 <br/>
-                <div id="display"></div>
+                <textarea id="display" width="30px" height="50px"></textarea>
                 <br/>
             </div>
+            <div className="map">
+              <MapComp lat={this.state.lat} lng={this.state.lng}/>
+            </div>
+          </div>
+
         );
 
 
