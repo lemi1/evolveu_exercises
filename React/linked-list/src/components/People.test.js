@@ -75,13 +75,13 @@ test('testing add birthday', () => {
 // name:Pumba age:22 dollars:600`);
 // });
 
-test('getPeople', () =>{
-  let myFamily = new lm.Family();
-  myFamily.addPeople('Scar', 67, 300);
-  myFamily.addPeople('Timon', 23, 500);
-  myFamily.addPeople('Pumba', 22, 600);
-  expect(myFamily.getPeople().show()).toBe(9);
-})
+// test('getPeople', () =>{
+//   let myFamily = new lm.Family();en
+//   myFamily.addPeople('Scar', 67, 300);
+//   myFamily.addPeople('Timon', 23, 500);
+//   myFamily.addPeople('Pumba', 22, 600);
+//   expect(myFamily.getPeople().show()).toBe(9);
+// })
 
 
 

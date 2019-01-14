@@ -1,6 +1,7 @@
 import React from 'react';
 import lm from './Community';
 import MapComp from  './MapComp'
+
 // let myHood = new lm.Community();
 class CommunityComp extends React.Component{
   constructor(){

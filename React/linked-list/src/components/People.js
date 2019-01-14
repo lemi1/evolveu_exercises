@@ -8,7 +8,7 @@ class People extends Object {
 
   birthday() {
     this.age = this.age + 1;
-    
+
   };
 
   show() {
@@ -27,10 +27,10 @@ class Family extends Object {
     //Family.prototype = Object.create(People.prototype);
   };
 
-  addPeople(name, age, dollars) {
+  addPeople(name, age) {
 
     //let mylength = this.myList.length;
-    let myPeople = new People(name, age, dollars);
+    let myPeople = new People(name, age);
     this.myList.push(myPeople);
 
   };
@@ -45,16 +45,19 @@ class Family extends Object {
   };
   callBirthday() {
     //let a = this.myList
+
     for (var index = 0; index < this.myList.length; index++) {
         this.myList[index].birthday();
+
     }
+    return
   };
 
   showAll(){
     let x;
     let showall="";
     for (x=0; x < this.myList.length; x++){
-      showall += `name:${this.myList[x].name} age:${this.myList[x].age} dollars:${this.myList[x].dollars}
+      showall += `name:${this.myList[x].name} age:${this.myList[x].age}
       \n`;
     }
     return showall;

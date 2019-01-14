@@ -1,13 +1,13 @@
- class Node{
+ class Node {
     constructor( subject, amount) {
         this.subject = subject;
         this.amount = amount;
         this.forwardNode = null;
     }
  }
- 
- 
- class LinkList{
+
+
+ class LinkedList{
     constructor(subject, amount){
         this.head = new Node(subject, amount);
     }
@@ -17,9 +17,9 @@
             while (x) {
                 console.log(x);
                 x = x.subject;
-                
-            }  
-            return x;  
+
+            }
+            return x;
 
         }
         add(){
@@ -32,6 +32,6 @@
 
 
 
-    }    
+    }
 
-export default {LinkList};
+export default {Node,LinkedList};

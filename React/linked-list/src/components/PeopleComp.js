@@ -8,12 +8,9 @@ class PeopleComp extends React.Component {
   addPeople = () =>{
     let name = document.getElementById("name").value;
     let age = parseFloat(document.getElementById("age").value);
-    let dollars = parseFloat(document.getElementById("dollars").value);
-    //let display = document.getElementById("display");
-    this.state.myTribe.addPeople(name,age,dollars);
-    //console.log(this.state.myTribe.show());
-    // console.log(this.state.myTribe.getPeople());
-    //display.value = this.state.myTribe.show();
+
+    this.state.myTribe.addPeople(name,age);
+
     document.getElementById("display").innerHTML = `${this.state.myTribe.showAll()}`;
 
   };
@@ -26,9 +23,11 @@ class PeopleComp extends React.Component {
   };
 
   callBirthday = () => {
+    let age = document.getElementById('age').value;
+    this.state.myTribe.callBirthday();
     document.getElementById('display').innerHTML
     =
-    this.state.myTribe.callBirthday();
+    this.state.myTribe.showAll();
   };
 
   showAll = () => {

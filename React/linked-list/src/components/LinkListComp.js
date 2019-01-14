@@ -7,6 +7,9 @@ import React from 'react';
       return (
         <div>
             <h1>Linked List</h1>
+            
+
+
         <button>
           New
         </button>

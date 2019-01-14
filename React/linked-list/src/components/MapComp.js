@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div style={{
-    color: 'white',
-    background: 'pink',
-    padding: '15px 10px',
+    color: 'black',
+    background: 'red',
+    padding: '5px 5px',
     display: 'inline-flex',
     textAlign: 'center',
     alignItems: 'center',
@@ -20,19 +20,10 @@ class MapComp extends Component {
   constructor(props){
     super();
     this.props=props
-    // defaultProps = {
-    //   center: {
-    //     lat:this.props.lat,
-    //     lng:this.props.lng
-    //   },
-    //   zoom: 11
-    // };
-
-    // this.state = {
+    
     this.center= {
-        // lat:this.props.lat,
-        // lng:this.props.lng,
-        zoom: 11
+        
+        zoom: 5
       }
       console.log(this.props.lat);
       console.log(this.center);
@@ -57,7 +48,7 @@ class MapComp extends Component {
           <AnyReactComponent
             lat={this.props.lat}
             lng={this.props.lng}
-            text={'0'}
+            text={''}
           />
         </GoogleMapReact>
       </div>
