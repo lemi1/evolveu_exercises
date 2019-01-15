@@ -27,10 +27,10 @@ class Family extends Object {
     //Family.prototype = Object.create(People.prototype);
   };
 
-  addPeople(name, age) {
+  addPeople(name, age,dollars) {
 
     //let mylength = this.myList.length;
-    let myPeople = new People(name, age);
+    let myPeople = new People(name, age, dollars);
     this.myList.push(myPeople);
 
   };

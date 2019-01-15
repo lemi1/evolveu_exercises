@@ -35,8 +35,8 @@ function math2(a,v1,v2){
     // console.log(calc[a]);
     // console.log(calc[a](v1,v2));
     return calc[a](v1,v2);
-   
-  
+
+
 };
 
 function math (a,v1,v2){
@@ -57,9 +57,9 @@ const dict = {
     3:'three',
 };
 function lookup(xxxxx){
-   console.log(dict[xxxxx])
+  // console.log(dict[xxxxx])
     return dict[xxxxx];
-    
+
 };
 
 export default {add, subtract, multiply,even_Odd,sum,calc,math,lookup,math2};
