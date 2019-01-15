@@ -1,17 +1,35 @@
 
 body {
-  background-image:url("world2.jpg");
+  background-image:url("nature.jpg");
+  background-size: cover;
 }
-h2 {
-   color: red;
+p {
+   color:#191C59;
    text-align: center;
-   border:5px solid purple;
+   border:5px solid rgba(255, 90, 0, 0.3);
+   cursor: pointer;
  }
 
  p {
-   color: green;
- }
+   line-height: 30px;
+   font-style: italic;
+   font-weight: bold;
+   font-size: 150%;
+   font-family: "Arial"
 
- p {
-   color: blue;
- }
+}
+img{
+  float: left;
+}
+footer{
+  clear: both;
+  text-align:center;
+
+}
+
+
+
+li {
+  list-style: none;
+  display: inline-block;
+}

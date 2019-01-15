@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import LinkedListComp from './components/LinkListComp';
+import LinkedListComp from './components/LinkedListComp';
 import MathComp from './components/MathComp';
 import CommunityComp from './components/CommunityComp';
 import PeopleComp from './components/PeopleComp';

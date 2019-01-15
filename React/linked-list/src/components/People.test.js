@@ -21,14 +21,14 @@ test('testing birthday', () => {
 });
 
 test('testing addPeople', () => {
-  // let myPeople = [
-  //                 new lm.People('Rafiki', 26, 100),
-  //                 new lm.People('Sirabi', 34, 200),
-  //                 new lm.People('Mufasa', 59, 300)
-  //               ];
+  let myPeople = [
+                  new lm.People('Rafiki', 26, 100),
+                  new lm.People('Sirabi', 34, 200),
+                  new lm.People('Mufasa', 59, 300)
+                ];
 
   let myFamily = new lm.Family();
-  console.log(myFamily);
+  // console.log(myFamily);
   myFamily.addPeople('Rafiki', 26, 100);
   expect(myFamily.myList[0].show()).toBe('Rafiki 26 100');
   myFamily.addPeople('Sirabi', 34, 200);
@@ -94,34 +94,38 @@ test('testing add birthday', () => {
 //      console.log(total);
 // }
 
-let me = new lm.People('Lemi', 25, 400);
-let larry = new lm.People('Larry', 33, 500);
-me.itMentor = larry;
-console.log(larry);
-console.log(me);
-larry.birthday();
-console.log(larry);
-me.birthday();
-console.log(me);
-let zazu = new lm.People('Zazu', 56, 1000);
-larry.itMentor = zazu;
-console.log(larry);
-console.log(zazu.age);
-console.log(zazu.name);
-zazu.birthday();
-console.log(zazu.age);
+// let me = new lm.People('Lemi', 25, 400);
+// let larry = new lm.People('Larry', 33, 500);
+// me.itMentor = larry;
+// console.log(larry);
+// console.log(me);
+// larry.birthday();
+// console.log(larry);
+// me.birthday();
+// console.log(me);
+// let zazu = new lm.People('Zazu', 56, 1000);
+// larry.itMentor = zazu;
+// console.log(larry);
+// console.log(zazu.age);
+// console.log(zazu.name);
+// zazu.birthday();
+// console.log(zazu.age);
+//
+//
+//
+//
+//
+//
+// let myCat = {
+//   "how many tails": 3
+// }
+// console.log(myCat["how many tails"])
+//
+// myCat = {
+//   tails: 3
+// }
+// console.log(myCat.tails)
 
-
-
-
-
-
-let myCat = {
-  "how many tails": 3
-}
-console.log(myCat["how many tails"])
-
-myCat = {
-  tails: 3
-}
-console.log(myCat.tails)
+// let c = "hi"
+// let b = c
+// console.log(b);
