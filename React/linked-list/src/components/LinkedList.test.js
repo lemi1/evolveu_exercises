@@ -1,14 +1,11 @@
-import Lemi from './LinkedList';
-test('dummy',() => {});
-// test('this is the Matrix', () => {
-//     console.log('hello world')
-// })
+import lm from './LinkedList';
 
-// test('this will show nodes', () => {
-//     let ll = new Lemi.LinkList('frist', 5);
-//     expect(ll.show()).toBe('frist, 9');
-
-
-//     expect(ll.add()).toBe('frist, 5');
-// })
-
+test('testing showAll and addNode',() => {
+  let myNode = new lm.LinkedList("v",400);
+  expect(myNode.showAll()).toBe(" Subject:v | Amount:400")
+  myNode.addNode("a",100);
+  myNode.addNode("b",200);
+  myNode.addNode("c",300);
+  expect(myNode.showAll()).toBe(" Subject:v | Amount:400 Subject:a | Amount:100 Subject:b | Amount:200 Subject:c | Amount:300"
+)
+  });

@@ -8,6 +8,7 @@ import PeopleComp from './components/PeopleComp';
 import thumbs from './calc.svg';
 import thumbs1 from './people.svg';
 import thumbs2 from './globe.svg';
+import thumbs3 from './link.svg';
 
 class App extends Component {
   constructor() {
@@ -39,12 +40,18 @@ class App extends Component {
             <div>
               <CommunityComp name='city'/>
             </div>
-        };
+        }else if(this.state.compToShow === "LinkedList") {
+          toShow =
+            <div>
+              <LinkedListComp name='LinkedList'/>
+            </div>
+          }
     return (
       <div className="App">
         <img src={thumbs} className="logos" name="math" onClick={this.onIcon} alt="calculator" />
         <img src={thumbs1} className="logos" name="people" onClick={this.onIcon} alt="people" />
         <img src={thumbs2} className="logos" name="city" onClick={this.onIcon} alt="globe" />
+        <img src={thumbs3} className="logos" name="LinkedList" onClick={this.onIcon} alt="LinkedList" />
         <div> {toShow} </div>
 
 
