@@ -1,48 +1,39 @@
- class Node {
-    constructor( subject, amount) {
-        this.subject = subject;
-        this.amount = amount;
-        this.forwardNode = null;
-    }
- }
+class Node {
+	constructor(subject, amount) {
+		this.subject = subject;
+		this.amount = amount;
+		this.pointer = null;
+	}
+}
 
-class LinkedList{
-    constructor(subject, amount){
-        this.head = new Node(subject, amount, null);
-    };
+class LinkedList {
+	constructor() {
+		this.head = null;
+		this.tail = null;
+	}
 
-    showAll(){
-      let x = this.head;
-      let z = ` Subject:${x.subject} | Amount:${x.amount}<br/>`;
-      while(x.forwardNode){
-        z += ` Subject:${x.forwardNode.subject} | Amount:${x.forwardNode.amount}<br/>`;
-        x = x.forwardNode;
-      }
+	// showAll() {
+	// 	let x = this.head;
+	// 	let z = ` Subject:${x.subject} | Amount:${x.amount}<br/>`;
+	// 	while (x.pointer) {
+	// 		z += ` Subject:${x.forwardNode.subject} | Amount:${x.forwardNode.amount}<br/>`;
+	// 		x = x.forwardNode;
+	// 	}
 
-        return z
+	// 	return z;
+	// }
 
-    };
+	addNode(subject, amount) {
+		let newNode = new Node(subject, amount, null);
+		let y = this.head;
+		if (y == null) {
+			y = newNode;
+		} else {
+			y = y.pointer;
+			y = newNode;
+		}
+		return y;
+	}
+}
 
-    addNode(subject,amount){
-      let y = this.head;
-      while(y.forwardNode !== null){
-        y = y.forwardNode
-      }
-      y.forwardNode = new Node(subject, amount);
-      console.log(y);
-      return y
-
-      };
-
-};
-
-
-
-
-
-
-
-
-
-
-export default {Node,LinkedList};
+export default { Node, LinkedList };
