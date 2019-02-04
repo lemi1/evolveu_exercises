@@ -5,7 +5,7 @@ JAVASCRIPT TYPES
 3. Boolean
 4. Undefined
 5. Null
-<!-- 6. Symbol (new in ECMAScript 6) -->
+<!-- 6. Symbol (new in ECMAScript 6) -->// unique
 7. Object
 
 JAVASCRIPT COMPARISONS
@@ -56,7 +56,10 @@ JAVASCRIPT LOOPING
 for
 while
 do 
-forEach (new in ECMAScript 5) 
+forEach (new in ECMAScript 5) ￼
+for in // properties enumerating objects or index of arrays
+for of // iterating arrays and strings
+
 
 
 JAVASCRIPT KEYWORDS
