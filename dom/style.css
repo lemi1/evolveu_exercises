@@ -1,0 +1,42 @@
+ .border{
+    
+    justify-content:center;
+    border: solid black;
+    box-sizing: border-box;
+    width: 200px;
+
+ }
+
+ .box{
+    position:absolute;
+    top:10%;
+    left:50%;
+    margin-top:-50px;  
+    margin-left:-100px;
+     
+ }
+
+ .game{
+    border:solid rgb(109, 14, 30);
+    position: relative;
+    top: 300px;
+    width: 500px;
+    text-align: center;
+ }
+ .card{
+    display: inline-block;
+    border: solid rgb(35, 14, 109);
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+ }
+
+ .rightSide{
+    position: relative;
+    border:solid rgb(21, 158, 16);
+    left: 800px;
+    top: 50px;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+ }
