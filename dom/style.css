@@ -1,42 +1,57 @@
- .border{
+body{
+   padding: 0px;
+   margin: 0px;
+}
+ 
+   
+   .box{
+   
+   box-sizing: border-box;
+   width: 500px;
     
-    justify-content:center;
-    border: solid black;
-    box-sizing: border-box;
-    width: 200px;
-
- }
-
- .box{
-    position:absolute;
-    top:10%;
-    left:50%;
-    margin-top:-50px;  
-    margin-left:-100px;
-     
+   list-style-position: inside;
+   border:solid purple;
+   justify-content: center;
+   text-align: center;
+   background-image:  linear-gradient(rgba(0, 0, 0, 0.609),rgba(0,0,0,0.6)),url('dom.jpg');
+   background-size:cover;
+   color:white;
  }
 
  .game{
-    border:solid rgb(109, 14, 30);
-    position: relative;
-    top: 300px;
+   
+    /* position: absolute; */
+    /* top: 10px; */
     width: 500px;
     text-align: center;
+    height: 500px;
+    background-image: url('card.jpg');
+    overflow-y: scroll;
+    background-size: cover;
+    
  }
- .card{
+ #card{
     display: inline-block;
-    border: solid rgb(35, 14, 109);
+    
     width: 400px;
     text-align: center;
     padding: 10px;
+    background-color: grey;
+
  }
 
  .rightSide{
-    position: relative;
+    /* position: relative; */
     border:solid rgb(21, 158, 16);
-    left: 800px;
-    top: 50px;
+    /* left: 800px; */
     width: 400px;
-    height: 600px;
+    
     text-align: center;
+    background-image: url('right.jpg');
+    background-size: 300px;
  }
+.TheDom{
+   display:flex;
+   align-content: flex-start;
+   justify-content: space-between;
+}
