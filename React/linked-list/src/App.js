@@ -28,24 +28,24 @@ class App extends Component {
     if (this.state.compToShow === 'math') {
       toShow =
         <div>
-          <MathComp name="math"/>
+          <MathComp name="math" />
         </div>
-      } else if(this.state.compToShow === "people") {
-          toShow =
-            <div>
-              <PeopleComp name="people"/>
-            </div>
-        }else if(this.state.compToShow === "city") {
-          toShow =
-            <div>
-              <CommunityComp name='city'/>
-            </div>
-        }else if(this.state.compToShow === "LinkedList") {
-          toShow =
-            <div>
-              <LinkedListComp name='LinkedList'/>
-            </div>
-          }
+    } else if (this.state.compToShow === "people") {
+      toShow =
+        <div>
+          <PeopleComp name="people" />
+        </div>
+    } else if (this.state.compToShow === "city") {
+      toShow =
+        <div>
+          <CommunityComp name='city' />
+        </div>
+    } else if (this.state.compToShow === "LinkedList") {
+      toShow =
+        <div>
+          <LinkedListComp name='LinkedList' />
+        </div>
+    }
     return (
       <div className="App">
         <img src={thumbs} className="logos" name="math" onClick={this.onIcon} alt="calculator" />
@@ -56,7 +56,7 @@ class App extends Component {
 
 
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>

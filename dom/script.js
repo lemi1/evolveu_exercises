@@ -1,5 +1,5 @@
 
-let counter = 3
+let counter = 0
 document.getElementById("btnAdd").addEventListener("click", function () {
     let ol = document.getElementById('list');
     let li = document.createElement('li');
@@ -19,10 +19,7 @@ document.getElementById("btnAdd").addEventListener("click", function () {
 
 let count = 1;
 document.getElementById("addy").addEventListener("click", createCard);
-//let parent = document.getElementById('card').addEventListener('click', function(event){
 
-//     console.log("hey", event.target.id)
-// });
 function createCard() {
 
     let div = document.createElement('div');
