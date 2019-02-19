@@ -5,43 +5,40 @@ import Logo from './comps/logo/Logo';
 import './comps/logo/logo.css';
 import Rank from './comps/Rank';
 import Particles from 'react-particles-js';
-import ParticleEffectButton from 'react-particle-effect-button'
-import ImageLinkForm from './comps/Form';
+// import ParticleEffectButton from 'react-particle-effect-button'
+import Form from './comps/Form';
+import Clarifai from 'clarifai';
 import './App.css';
 
+
+const app = new Clarifai.App({
+  apiKey: '6e7a3d095daf4101be97442f8cf9cd93'
+});
 
 const particleOption = {
   particles: {
     number: {
-      value: 300,
+      value: 100,
       density: {
-        enable: true,
+        enable: false,
         value_area: 800,
 
       }
     }
   },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-    }
-  }
-}
-const particleButton = {
-  < ParticleEffectButton
-color = '#121019'
-hidden = { this.state.hidden }
-  >
-  BUTTON CONTENT GOES HERE
-      </ParticleEffectButton >
+  // "interactivity": {
+  //   "detect_on": "canvas",
+  //   "events": {
+  //     "onhover": {
+  //       "enable": false,
+  //       "mode": "repulse"
+  //     },
+  //     "onclick": {
+  //       "enable": false,
+  //       "mode": "push"
+  //     },
+  //   }
+  // }
 }
 
 class App extends Component {
@@ -56,8 +53,16 @@ class App extends Component {
     console.log(event.target.value);
   }
 
-  onSubmit = () => {
+  onButtonSubmit = () => {
     console.log('click');
+    app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
+      function (response) {
+        console.log(response)
+      },
+      function (err) {
+        // there was an error
+      }
+    );
   }
   render() {
     return (
@@ -69,10 +74,9 @@ class App extends Component {
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm className='particleButton'
-
+        <Form
           onInputChange={this.onInputChange}
-          onSubmit={this.onSubmit}
+          onSubmit={this.onButtonSubmit}
         />
         {/* { <FaceSpotter />} */}
       </div>

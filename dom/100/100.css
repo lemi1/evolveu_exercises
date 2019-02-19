@@ -1,0 +1,13 @@
+ 
+.list{
+    border: solid red;
+    width: 450px;
+    position: absolute;
+}
+
+.map{
+    border:solid purple;
+    width: 450px;
+    position: absolute;
+    top: 300px;
+}
