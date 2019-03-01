@@ -5,10 +5,12 @@ import LinkedListComp from './components/LinkedListComp';
 import MathComp from './components/MathComp';
 import CommunityComp from './components/CommunityComp';
 import PeopleComp from './components/PeopleComp';
+import TaxesComp from './components/TaxesComp';
 import thumbs from './calc.svg';
 import thumbs1 from './people.svg';
 import thumbs2 from './globe.svg';
 import thumbs3 from './link.svg';
+import thumbs4 from './tax.svg';
 
 class App extends Component {
   constructor() {
@@ -45,6 +47,11 @@ class App extends Component {
         <div>
           <LinkedListComp name='LinkedList' />
         </div>
+    } else if (this.state.compToShow === "Tax") {
+      toShow =
+        <div>
+          <LinkedListComp name='Tax' />
+        </div>
     }
     return (
       <div className="App">
@@ -52,6 +59,7 @@ class App extends Component {
         <img src={thumbs1} className="logos" name="people" onClick={this.onIcon} alt="people" />
         <img src={thumbs2} className="logos" name="city" onClick={this.onIcon} alt="globe" />
         <img src={thumbs3} className="logos" name="LinkedList" onClick={this.onIcon} alt="LinkedList" />
+        <img src={thumbs4} className="logos" name="Tax" onClick={this.onIcon} alt="Tax" />
         <div> {toShow} </div>
 
 

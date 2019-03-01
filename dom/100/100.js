@@ -1,22 +1,45 @@
 
 let numList = [];
 document.getElementById('add').addEventListener('click', function () {
-    let a = parseInt(document.getElementById('num').value)
+    let a = document.getElementById('num').value
     let message = document.getElementById('message')
-    numList.push(a)
-    message.textContent = a + ' is added to the list'
+    if (!isNaN(a)) {
+
+        numList.push(parseInt(a))
+
+        return message.textContent = a + ' is added to the list'
+    } else {
+        return message.textContent = 'you did not enter a number'
+    }
+
 
 });
-console.log(numList);
 
-document.getElementById("show").addEventListener('click', function (item) {
+document.getElementById("show").addEventListener('click', function () {
     for (num of numList) {
-
         list = document.createElement('li');
-        document.getElementById('message').appendChild(list);
 
-        console.log(list);
+        list.appendChild(document.createTextNode(num))
+        document.getElementById('message').appendChild(list);
     }
+
+})
+function getSum(total, num) {
+
+    return total + num;
+}
+
+document.getElementById("total").addEventListener('click', function () {
+
+    document.getElementById("message").textContent = numList.reduce(getSum);
+
+
+})
+
+document.getElementById("clear").addEventListener('click', function () {
+    numList.length = 0
+    document.getElementById('message').textContent = 'your array is empty'
+
     console.log(numList)
 })
 
@@ -24,24 +47,7 @@ document.getElementById("show").addEventListener('click', function (item) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let province = {
+let Province = {
     AB: "Alberta",
     BC: "British Columbia",
     QC: "Quebec",
@@ -56,3 +62,17 @@ let province = {
     NU: "Nunavut",
     PE: "Prince Edward Island"
 }
+
+document.getElementById('look').addEventListener('click', function () {
+    let input = document.getElementById('dic').value.toUpperCase()
+    let output = document.getElementById('message1')
+    let Canada = Object.keys(Province)
+    if (Canada.includes(input)) {
+        let value = Object.values(Province).find(value => Province[input] === value);
+        output.textContent = value
+    } else {
+        output.textContent = "you did not enter a correct Province abbreviation"
+    }
+
+})
+

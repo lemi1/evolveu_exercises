@@ -1,5 +1,5 @@
 import React from 'react'
-import './form/form.css'
+import './Form.css'
 
 const Form = ({ onInputChange, onButtonSubmit }) => {
     return (
