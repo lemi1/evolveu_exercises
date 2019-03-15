@@ -11,7 +11,7 @@ document.getElementById('add').addEventListener('click', function () {
     } else {
         return message.textContent = 'you did not enter a number'
     }
-
+    console.log(numlist)
 
 });
 
