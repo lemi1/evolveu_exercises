@@ -1,9 +1,24 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 
 const app = express();
+
+app.use(bodyParser.urlencoded ({extended:false})) 
+app.use(bodyParser.json())
+
 app.get('/', (req, res) => {
-    res.send('hey hey')
+    res.send('getting Root')
 })
 
+
+app.get('/profile', (req, res) => {
+    res.send('getting profile')
+})
+
+app.post('/profile',(req,res) => {
+   console.log(req.body);
+    res.send('succes')
+})
 app.listen(4000);
 

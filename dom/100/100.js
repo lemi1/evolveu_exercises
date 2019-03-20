@@ -14,8 +14,8 @@ document.getElementById('add').addEventListener('click', function () {
     console.log(numlist)
 
 });
-
 document.getElementById("show").addEventListener('click', function () {
+
     for (num of numList) {
         list = document.createElement('li');
 
