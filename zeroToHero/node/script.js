@@ -4,4 +4,4 @@ const a = number.largeNumber
 const b = 8
 
 
-console.log(a + b);
+console.log(__dirname);
