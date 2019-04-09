@@ -5,7 +5,6 @@ import Logo from './comps/logo/Logo';
 import './comps/logo/logo.css';
 import Rank from './comps/Rank/Rank';
 import Particles from 'react-particles-js';
-// import ParticleEffectButton from 'react-particle-effect-button'
 import Form from './comps/form/Form';
 import FaceSpotter from './comps/facespotter/Facespotter';
 import SignIn from './comps/SignIn/SignIn'
@@ -29,19 +28,7 @@ const particleOption = {
       }
     }
   },
-  // "interactivity": {
-  //   "detect_on": "canvas",
-  //   "events": {
-  //     "onhover": {
-  //       "enable": false,
-  //       "mode": "repulse"
-  //     },
-  //     "onclick": {
-  //       "enable": false,
-  //       "mode": "push"
-  //     },
-  //   }
-  // }
+  
 }
 
 class App extends Component {
