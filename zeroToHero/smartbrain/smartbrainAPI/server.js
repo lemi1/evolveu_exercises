@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt-nodejs')
+const cors = require('cors')
 
 const app = express()
 
@@ -9,6 +10,7 @@ const database = {
         {
             id:'123',
             name:'John',
+            password:'cookies',
             email:'john@gmail.com',
             entries:0,
             joined: new Date()
@@ -17,6 +19,7 @@ const database = {
         {
             id:'456',
             name:'Sally',
+            password:'banans',
             email:'Sally@gmail.com',
             entries:0,
             joined: new Date()
@@ -31,6 +34,7 @@ const database = {
     ]
 }
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/', (req, res) =>{
     res.send(database.users)

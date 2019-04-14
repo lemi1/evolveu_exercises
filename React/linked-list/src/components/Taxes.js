@@ -53,4 +53,4 @@ function taxCalc(income, taxBracket) {
 
 
 
-export default Taxes;
+//export default Taxes;

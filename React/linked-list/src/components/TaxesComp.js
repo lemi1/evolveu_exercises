@@ -1,5 +1,5 @@
 import React from 'react';
-import tax from './Taxes';
+//import tax from './Taxes';
 
 
 class Taxes extends React.Component {
@@ -26,4 +26,4 @@ class Taxes extends React.Component {
 
 
 
-export default Taxes;
+//export default Taxes;
