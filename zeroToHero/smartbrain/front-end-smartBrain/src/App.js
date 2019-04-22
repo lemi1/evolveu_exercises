@@ -39,8 +39,26 @@ class App extends Component {
       imageUrl: '',
       box: {},
       route: 'signIn',
-      isSignedIn: false
+      isSignedIn: false,
+      user:{
+        
+        id:'',
+        name:'',
+        email:'',
+        entries:0,
+        joined: ''
+      }
     }
+  }
+  loadUser = (data) => {
+    this.setState({user :{
+        id:data.id,
+        name:data.name,
+        email:data.email,
+        entries:data.entries,
+        joined: data.joined
+
+    }})
   }
 
   
@@ -73,7 +91,23 @@ class App extends Component {
       .predict(
         Clarifai.FACE_DETECT_MODEL,
         this.state.input)
-      .then(response => this.displayFaceBox(this.calcFaceLocation(response)))
+      .then(response => {
+        if(response){
+          fetch('http://localhost:4000/image',{
+            method:'put',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({
+            id:this.state.user.id
+            
+            })
+          })
+            .then(response => response.json())
+            .then(count => {
+              this.setState(Object.assign(this.state.user, {entries:count}))
+            })
+        }
+        this.displayFaceBox(this.calcFaceLocation(response))
+      })
       .catch(err => console.log(err))
 
   }
@@ -114,7 +148,7 @@ class App extends Component {
             ?
             <SignIn onRouteChange={this.onRouteChange} />
             :
-            <Register onRouteChange={this.onRouteChange} />
+            <Register loadUser={this.loadUser}onRouteChange={this.onRouteChange} />
 
           )
           
